@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>_____</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE']}&sensor=false" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background: #25a5e7; display: table; text-align: center; width: 100%;">
+  <h1 class="splash"><%= link_to("akio", login_path ) %></h1>
+
+  <!-- body content here -->
+
+  <script>
+  $(document).foundation();
+  </script>
+  <script src='assets/ripple.js'></script>
+</body>
+</html>

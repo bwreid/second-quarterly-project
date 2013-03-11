@@ -1,0 +1,25 @@
+<h1>Listing tanks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% binding.pry %>
+
+<% @tanks.each do |tank| %>
+  <tr>
+    <td><%= tank.name %></td>
+    <td><%= link_to 'Show', tank %></td>
+    <td><%= link_to 'Edit', edit_tank_path(tank) %></td>
+    <td><%= link_to 'Destroy', tank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tank', new_tank_path %>

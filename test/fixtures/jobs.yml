@@ -1,0 +1,48 @@
+# == Schema Information
+#
+# Table name: jobs
+#
+#  id          :integer          not null, primary key
+#  url         :text
+#  name        :string(255)
+#  description :text
+#  company     :string(255)
+#  industry    :string(255)
+#  location    :string(255)
+#  job_type    :string(255)
+#  deadline    :date
+#  website     :string(255)
+#  tags        :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  tank_id     :integer
+#  lat         :float
+#  lon         :float
+#  completed   :boolean          default(FALSE)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  url: MyText
+  name: MyString
+  description: MyText
+  company: MyString
+  industry: MyString
+  location: MyString
+  job_type: MyString
+  deadline: 2013-03-04
+  website: MyString
+  tags: MyText
+
+two:
+  url: MyText
+  name: MyString
+  description: MyText
+  company: MyString
+  industry: MyString
+  location: MyString
+  job_type: MyString
+  deadline: 2013-03-04
+  website: MyString
+  tags: MyText

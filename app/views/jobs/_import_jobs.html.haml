@@ -1,0 +1,18 @@
+%h5 Authentic Jobs
+%fieldset
+  = form_tag( query_jobs_path, :remote => true ) do
+    .row
+      .large-6.columns
+        = label_tag "Authentic Jobs"
+        = text_field_tag :authentic
+      .large-6.columns
+        = label_tag "Idealist"
+        = text_field_tag :idealist
+    .row
+      .large-6.columns
+        = label_tag "Indeed.com"
+        = text_field_tag :indeed
+      .large-6.columns
+        = label_tag "37signals"
+        = text_field_tag :signals
+      = submit_tag "Add"

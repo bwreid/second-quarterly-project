@@ -1,0 +1,16 @@
+$('.job_list').empty();
+$('.job_list').append('<%=j render :partial => 'jobs/index' %>');
+$('.main_view').empty();
+$('.main_view').prepend( '<%=j render :partial => 'jobs/show' %>' );
+
+if($('.job_nav').find('i').first().hasClass('foundicon-folder')) {
+  $('.main_view').attr('id','greyed');
+  $('.job_nav').find('i').first().removeClass().addClass('foundicon-inbox');
+  $('.job_nav').find('li').last().fadeOut(250);
+  $('.job_nav').find('li').last().prev().fadeOut(250);
+} else {
+  $('.main_view').attr('id','');
+  $('.job_nav').find('i').first().removeClass().addClass('foundicon-folder');
+  $('.job_nav').find('li').last().fadeIn(250);
+  $('.job_nav').find('li').last().prev().fadeIn(250);
+}

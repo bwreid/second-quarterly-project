@@ -1,0 +1,40 @@
+%h5 Add a New Job & Keep Track
+%fieldset
+  = form_for @job, :remote => true do |f|
+    - if @job.errors.any?
+      %div{ :id => "error_explanation" }
+        %h4
+          we found
+          = pluralize(@job.errors.count, "error")
+        %ul
+          - @job.errors.full_messages.each do |msg|
+            %li= msg
+    .row
+      .large-4.columns
+        = f.label :name, "Title"
+        = f.text_field :name
+      .large-4.columns
+        = f.label :company
+        = f.text_field :company
+      .large-4.columns
+        = f.label :website
+        = f.text_field :website
+    .row
+      .large-4.columns
+        = f.label :job_type
+        = f.text_field :job_type
+      .large-4.columns
+        = f.label :deadline
+        = f.text_field :deadline
+      .large-4.columns
+        = f.label :location
+        = f.text_field :location
+    .row
+      .large-12.columns
+        = f.label :url
+        = f.text_field :url
+    .row
+      .large-12.columns
+        = f.label :description
+        = f.text_area :description
+        = f.submit "Add Job", :class => 'button secondary', :style => 'margin-bottom: 0px'

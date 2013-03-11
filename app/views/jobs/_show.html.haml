@@ -1,0 +1,40 @@
+- if @job.present?
+  .row.main_nav
+    .large-4.columns
+      %h6= link_to('Edit', edit_job_path(@job), :remote => true, 'data-reveal-id' => 'modal')
+    .large-4.columns
+      %h6
+        %a{ :href => complete_job_path(@job), 'data-remote' => true, 'data-method' => 'post' }
+          - if @job.completed
+            uncheck
+          - else
+            %i{ :class => 'foundicon-checkmark' }
+    .large-4.columns
+      %h6= link_to( 'Delete', job_path(@job), :method => 'delete', :remote => true )
+  .row
+    .large-6.columns.table
+      .job_heading
+        %h1= @job.company
+        %h2= @job.name
+    .large-6.columns.map_container
+      #map_canvas{ :style => ( "display: none;" if @job.location.blank? ) }
+      .location
+        %em= "#{@job.location} - "
+        = link_to("Return to Posting", @job.url, :target => '_blank')
+  .row
+    .large-12.columns
+      %p{ :style => 'line-height: 2; padding: 25px 0;' }= truncate(@job.description, :length => 455, :separator => ' ')
+  .main_details
+    .row
+      .large-3.columns
+        %h6= @job.job_type.blank? ? link_to('Add Job Type', edit_job_path(@job), :remote => true, 'data-reveal-id' => 'modal') : @job.job_type
+      .large-6.columns
+        %h6= @job.website.blank? ? link_to('Add Company Website', edit_job_path(@job), :remote => true, 'data-reveal-id' => 'modal') : link_to("#{@job.website.gsub('http://','')}", "#{@job.website}", :target => '_blank')
+      .large-3.columns
+        %h6= @job.deadline.blank? ? link_to('Add Deadline', edit_job_path(@job), :remote => true, 'data-reveal-id' => 'modal') : @job.deadline
+  %script
+    - if @job.location.present?
+      = "display_map( #{@job.lat}, #{@job.lon}, 12 );"
+      = "add_marker(#{@job.lat}, #{@job.lon}, '#{@job.company}')"
+- else
+  = render :partial => 'jobs/info'

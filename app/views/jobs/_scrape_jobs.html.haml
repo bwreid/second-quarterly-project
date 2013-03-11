@@ -1,0 +1,8 @@
+%h5 Import from Search Engines
+%fieldset
+  = form_tag( scrape_jobs_path, :remote => true ) do
+    .row
+      .large-12.columns
+        = label_tag "Search Terms"
+        = text_field_tag :search
+      = submit_tag "Add"

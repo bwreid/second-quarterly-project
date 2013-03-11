@@ -1,0 +1,4 @@
+$('.job_list').empty();
+$('.job_list').append('<%=j render :partial => 'jobs/index' %>');
+$('.main_view').empty();
+$('.main_view').prepend( '<%=j render :partial => 'jobs/show' %>' );

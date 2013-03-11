@@ -1,0 +1,148 @@
+@import 'colors';
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+html { height: 100%; }
+body { height: 100%; font-family: 'Lato', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif; }
+.row.full_width { max-width: none; }
+.columns.no_pad { padding-left: 0; padding-right: 0; }
+.strike { text-decoration: line-through; }
+
+.splash {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Lato', sans-serif;
+  color: #FFF;
+  font-size: 6em;
+  a {
+    color: #FFF;
+    &:hover {
+      color: $main;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// MAIN PAGE FREESTYLING
+////////////////////////////////////////////////////////////////
+
+.job_wrap {
+  height: 100%;
+  .job_nav {
+    ul {
+      padding: 30px 0 10px;
+      border-bottom: 1px solid $light;
+      margin-bottom: 0px;
+      li {
+        display: inline-block;
+        text-align: center;
+        font-size: 2em;
+        width: 32%;
+        a {
+          color: darken($light, 10%);
+          -webkit-transition: all 0.7s;
+          &:hover {
+            color: darken($main, 20%);
+          }
+        }
+      }
+    }
+  }
+  .job_list {
+    .job {
+      &.highlighted {
+        background-color: $main;
+        h6 { color: darken($main, 20%); }
+      }
+      -webkit-transition: all 0.5s;
+    }
+    h6 {
+      &:hover { background-color: $main; color: darken($main, 20%); }
+      color: darken($light, 10%);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      -webkit-transition: all 0.5s;
+
+    }
+  }
+}
+
+.table {
+  display: table;
+  min-height: 210px;
+  .job_heading { display: table-cell; vertical-align: middle; }
+}
+
+
+
+.main_section { border-left: 1px solid $light; }
+
+#greyed {
+  p, a, a:hover, h1, h2, h3, h4, h5, h6 { color: grey; }
+  opacity: 0.5;
+}
+
+.main_view {
+  height: 100%;
+  padding: 50px;
+  h1 { font-size: 3em; }
+  h1, h2 { margin-bottom: 0; }
+  h2 { font-weight: 300; }
+  h6 { text-align: center; }
+  .main_nav {
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 15px;
+    .highlighted { padding: 5px; background-color: $main }
+  }
+  .main_details {
+    padding: 20px;
+    background-color: lighten($main, 20%);
+    h6 {
+      color: darken($main, 10%);
+      text-align: center;
+    }
+  }
+}
+
+.map_container {
+  padding: 10px 0 20px;
+  .location {
+    margin: 10px 0 0;
+  }
+  #map {
+    height: 100%;
+  }
+  #map_canvas {
+    border: 1px solid $light;
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// HEADER, FOOTER, NAV - YOU KNOW
+////////////////////////////////////////////////////////////////
+
+.top-bar {
+  background: darken($main, 20%);
+  .name h1 a {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+  }
+  .top-bar-section li a:not(.button) {
+    background: darken($main, 20%);
+    color: #fff;
+  }
+  .top-bar-section>ul>.divider {
+    border-left: none;
+    border-right: none;
+
+  }
+}
+
+footer {
+  border-top: 1px solid $light;
+  padding: 10px 0;
+}
