@@ -10,5 +10,5 @@ User.delete_all
 Tank.delete_all
 Job.delete_all
 
-user = User.create( :username => 'x', :password => 'x', :password_confirmation => 'x', :first => 'bryan', :last => 'reid' )
+user = User.create( :email => 'x', :username => 'x', :password => 'x', :password_confirmation => 'x', :first => 'bryan', :last => 'reid' )
 user.tanks << Tank.create( :name => 'Default' )

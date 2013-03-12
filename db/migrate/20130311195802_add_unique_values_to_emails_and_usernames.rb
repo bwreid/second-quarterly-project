@@ -1,5 +1,8 @@
 class AddUniqueValuesToEmailsAndUsernames < ActiveRecord::Migration
   def change
-    add_index :users, [:email, :username], :unique => true
+    remove_column :users, :username
+    remove_column :users, :email
+    add_column :users, :username, :string, :unique => true
+    add_column :users, :email, :string, :unique => true
   end
 end

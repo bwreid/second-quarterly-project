@@ -44,12 +44,12 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     respond_to do |format|
-      if @user.save
+    if @user.try(:save)
         @user.tanks << Tank.create( :name => 'Default' )
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new }
         # format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end

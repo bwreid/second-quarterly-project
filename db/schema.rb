@@ -42,14 +42,12 @@ ActiveRecord::Schema.define(:version => 20130311195802) do
   create_table "users", :force => true do |t|
     t.string   "first"
     t.string   "last"
-    t.string   "username"
-    t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.boolean  "complete_list",   :default => true
+    t.string   "username"
+    t.string   "email"
   end
-
-  add_index "users", ["email", "username"], :name => "index_users_on_email_and_username", :unique => true
 
 end

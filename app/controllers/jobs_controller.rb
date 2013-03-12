@@ -22,7 +22,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        @auth.incompleted_jobs << @job
+        @auth.tanks.first.jobs << @job
         @jobs = list
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
         format.js {}
