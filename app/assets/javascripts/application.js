@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require 'foundation/js/vendor/custom.modernizr.js'
-//= require 'foundation/js/foundation.min.js'
-//= require 'foundation/js/vendor/zepto.js'
+//= require 'custom.modernizr.js'
+//= require 'foundation.min.js'
+//= require 'zepto.js'
+//= require 'foundation.reveal.js'
 //= require 'underscore.js'
 //= require 'map.js'
 //= require 'main.js'
