@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require 'custom.modernizr.js'
 //= require 'foundation.min.js'
-//= require 'zepto.js'
 //= require 'foundation.reveal.js'
 //= require 'underscore.js'
+//= require 'zepto.js'
 //= require 'map.js'
 //= require 'main.js'
