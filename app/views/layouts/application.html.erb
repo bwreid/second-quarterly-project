@@ -9,6 +9,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE']}&sensor=false" %>
+  <script src="http://bryanwreid.com/zepto.js"></script>
+  <script src="http://bryanwreid.com/custom.modernizr.js"></script>
+  <script src="http://bryanwreid.com/foundation.min.js"></script>
+  <script src="http://bryanwreid.com/foundation.reveal.js"></script>
+  <script src="http://bryanwreid.com/akio.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -21,8 +26,12 @@
   <!-- body content here -->
 
   <script>
+<<<<<<< HEAD
     $(document).foundation();
     $('#loadingModal').foundation('reveal', 'open');
+=======
+  $(document).foundation();
+>>>>>>> production_edits
   </script>
 </body>
 </html>

@@ -1,10 +1,25 @@
 ---
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
+<<<<<<< HEAD
 application.js: application-62c73379630cc4a429707705627f09e6.js
 application/index.js: application-62c73379630cc4a429707705627f09e6.js
 application.css: application-a27211ff8f775d23cb42ba097152582d.css
 application/index.css: application-a27211ff8f775d23cb42ba097152582d.css
+=======
+application.js: application-98cc5c8f237054b2f95f7632e11f0881.js
+application/index.js: application-98cc5c8f237054b2f95f7632e11f0881.js
+application.css: application-a27211ff8f775d23cb42ba097152582d.css
+application/index.css: application-a27211ff8f775d23cb42ba097152582d.css
+fonts/general_foundicons.eot: fonts/general_foundicons-8c6580bd63c56cdf236a47de5cfef58c.eot
+fonts/general_foundicons/index.eot: fonts/general_foundicons-8c6580bd63c56cdf236a47de5cfef58c.eot
+fonts/general_foundicons.svg: fonts/general_foundicons-a3f6f38b87c4386a28a06d8bb00771d4.svg
+fonts/general_foundicons/index.svg: fonts/general_foundicons-a3f6f38b87c4386a28a06d8bb00771d4.svg
+fonts/general_foundicons.ttf: fonts/general_foundicons-475b868acfd2fbacdf19ac27705f6959.ttf
+fonts/general_foundicons/index.ttf: fonts/general_foundicons-475b868acfd2fbacdf19ac27705f6959.ttf
+fonts/general_foundicons.woff: fonts/general_foundicons-c485369b0a4465856eb4a7bf2558eeac.woff
+fonts/general_foundicons/index.woff: fonts/general_foundicons-c485369b0a4465856eb4a7bf2558eeac.woff
+>>>>>>> production_edits
 foundation/humans.txt: foundation/humans-59b78915426ea963087e781bf2006285.txt
 foundation/humans/index.txt: foundation/humans-59b78915426ea963087e781bf2006285.txt
 foundation/index.html: foundation/index-a8868f19e7ca09dc3baf6e22c88bc69c.html

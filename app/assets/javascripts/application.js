@@ -18,4 +18,5 @@
 //= require 'underscore.js'
 //= require 'zepto.js'
 //= require 'map.js'
-//= require 'main.js'
+//= require 'akio.js'
+//= require_tree .
