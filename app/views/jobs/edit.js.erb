@@ -1,3 +1,4 @@
-$('#modal').find('h5').remove();
-$('#modal').find('fieldset').remove();
-$('#modal').prepend( '<%=j render :partial => 'jobs/form' %>' );
+$('.dropdown').empty();
+$('.dropdown').prepend( '<%=j render :partial => 'jobs/form' %>' );
+$('.dropdown').slideDown();
+$('.main_view').empty();

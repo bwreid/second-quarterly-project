@@ -15,11 +15,11 @@
       .job_list
         = render :partial => 'jobs/index'
   .small-6.large-8.columns.main_section
+    .dropdown{ :id => "modal", :class => 'hide' }
     .main_view
       - if @jobs.present?
         = render :partial => 'jobs/show'
       - else
         = render :partial => 'jobs/info'
 
-.xlarge.reveal-modal{ :id => "modal" }
-  %a{ :class => "close-reveal-modal" } &#215;
+

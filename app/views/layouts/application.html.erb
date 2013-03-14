@@ -18,18 +18,11 @@
 
 <%= render :partial => 'layouts/footer' %>
 
-<div id="loadingModal" class="reveal-modal tiny">
-  <h6>Welcome back. I'm loading your dashboard for you.</h2>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
   <!-- body content here -->
 
   <script>
-  $(document).foundation();
-  </script>
-  <script>
-  // $('#loadingModal').foundation('reveal', 'open');
+    $(document).foundation();
+    $('#loadingModal').foundation('reveal', 'open');
   </script>
 </body>
 </html>

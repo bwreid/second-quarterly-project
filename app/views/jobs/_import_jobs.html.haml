@@ -15,4 +15,7 @@
       .large-6.columns
         = label_tag "37signals"
         = text_field_tag :signals
-      = submit_tag "Add"
+    .row
+      .large-12.columns
+        = submit_tag "Add"
+        %a{ 'onclick' => '$(".dropdown").slideUp(); $(".dropdown").delay(200).empty();', :class => 'button secondary right', :id => 'cancel' } Cancel

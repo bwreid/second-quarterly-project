@@ -1,3 +1,4 @@
-$('a.close-reveal-modal').trigger('click');
+$(".dropdown").slideUp();
+$(".dropdown").empty();
 $('.job_list').empty();
 $('.job_list').append('<%=j render :partial => 'jobs/index' %>');
