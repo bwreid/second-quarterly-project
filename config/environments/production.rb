@@ -9,11 +9,7 @@ SecondQuarterlyProject::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-<<<<<<< HEAD
   config.serve_static_assets = true ## change
-=======
-  config.serve_static_assets = true
->>>>>>> production_edits
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
