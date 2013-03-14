@@ -9,6 +9,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE']}&sensor=false" %>
+  <script src="http://bryanwreid.com/zepto.js"></script>
+  <script src="http://bryanwreid.com/custom.modernizr.js"></script>
+  <script src="http://bryanwreid.com/foundation.min.js"></script>
+  <script src="http://bryanwreid.com/foundation.reveal.js"></script>
+  <script src="http://bryanwreid.com/akio.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,18 +23,10 @@
 
 <%= render :partial => 'layouts/footer' %>
 
-<div id="loadingModal" class="reveal-modal tiny">
-  <h6>Welcome back. I'm loading your dashboard for you.</h2>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
   <!-- body content here -->
 
   <script>
   $(document).foundation();
-  </script>
-  <script>
-  // $('#loadingModal').foundation('reveal', 'open');
   </script>
 </body>
 </html>

@@ -19,4 +19,5 @@
 //= require 'morris/morris.min.js'
 //= require 'underscore.js'
 //= require 'map.js'
-//= require 'main.js'
+//= require 'akio.js'
+//= require_tree .

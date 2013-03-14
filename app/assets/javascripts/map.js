@@ -1,5 +1,7 @@
-$(function() {
-});
+function highlight_selected(job) {
+  $('.job').removeClass('highlighted');
+  $(this).addClass('highlighted');
+}
 
 function add_marker(lat, long, title){
   var latlng = new google.maps.LatLng(lat, long);
