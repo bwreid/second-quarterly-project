@@ -9,11 +9,6 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE']}&sensor=false" %>
-  <script src="http://bryanwreid.com/zepto.js"></script>
-  <script src="http://bryanwreid.com/custom.modernizr.js"></script>
-  <script src="http://bryanwreid.com/foundation.min.js"></script>
-  <script src="http://bryanwreid.com/foundation.reveal.js"></script>
-  <script src="http://bryanwreid.com/akio.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -25,8 +20,40 @@
 
   <!-- body content here -->
 
+  <script src="http://bryanwreid.com/akio/js/zepto.js"></script>
+  <script src="http://bryanwreid.com/akio/js/custom.modernizr.js"></script>
+  <!-- <script src="http://bryanwreid.com/akio/js/foundation.min.js"></script> -->
+  <script src="http://bryanwreid.com/akio/js/foundation.reveal.js"></script>
+  <script src="http://bryanwreid.com/akio/js/jquery.joyride-2.0.3.js"></script>
+  <script src="http://bryanwreid.com/akio/js/akio.js"></script>
+
   <script>
   $(document).foundation();
   </script>
+
+  <ol id="joyRideContent" style="display:none">
+    <li data-button="Next: Steps">
+      <h4>Hey, <strong><%= @auth.username.upcase %></strong>!</h4>
+      <h6>Thanks for using <strong>Akio</strong>.</h6>
+      <p>Akio is a simple way to save jobs you'd like to apply for throughout job search. We separate the job site and the application process to help provide some clarity. Let me show you around for a second.</p>
+    </li>
+    <li data-id="add-doc" data-button="Next: Steps" data-options="tipLocation:right; tipAnimation:fade">
+      <h6>Use this button to add jobs by URL.</h6>
+    </li>
+    <li data-id="plus" data-button="Next: Steps" data-options="tipLocation:right; tipAnimation:fade">
+      <h6>Aren't pulling from a website that we pull from? Add your own here.</h6>
+    </li>
+    <li data-id="folder" data-button="Next: Steps" data-options="tipLocation:right; tipAnimation:fade">
+      <h6>After you check a job off your list, you'll find the completed ones here.</h6>
+    </li>
+
+  </ol>
+
+  <script>
+    $(document).ready(function() {
+      $('#joyRideContent').joyride();
+    });
+  </script>
+
 </body>
 </html>

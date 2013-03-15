@@ -3,15 +3,15 @@
     .job_wrap
       .job_nav
         %ul
-          %li
+          %li{ :id => 'folder' }
             %a{ :href => order_list_jobs_path, 'data-remote' => true, 'data-method' => 'post' }
               %i{ :class => 'foundicon-folder' }
-          %li
+          %li{ :id => 'plus' }
             %a{ :href => new_job_path, 'data-remote' => true, 'data-reveal-id' => 'modal' }
-              %i{ :class => 'foundicon-plus'}
-          %li
+              %i{ :class => 'foundicon-plus' }
+          %li{ :id => 'add-doc' }
             %a{ :href => query_jobs_path, 'data-remote' => true, 'data-reveal-id' => 'modal' }
-              %i{ :class => 'foundicon-add-doc'}
+              %i{ :class => 'foundicon-add-doc' }
       .job_list
         = render :partial => 'jobs/index'
   .small-6.large-8.columns.main_section
