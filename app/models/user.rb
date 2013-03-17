@@ -14,9 +14,9 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :first, :last, :password, :password_confirmation, :username, :complete_list
+  attr_accessible :email, :first, :last, :password, :password_confirmation, :complete_list
   has_secure_password
-  validates :username, :email, :uniqueness => { :case_sensitve => false }, :presence => true
+  validates :email, :uniqueness => { :case_sensitve => false }, :presence => true
   has_many :tanks
 
   def has_jobs?
